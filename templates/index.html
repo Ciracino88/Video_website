@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Loop Example</title>
+</head>
+<body>
+    <h1>동영상을 반복 재생합니다</h1>
+    <video id="videoPlayer" width="640" height="360" controls loop>
+        <source src="{{ url_for('static', filename='sample.mov') }}" type="video/quicktime">
+        Your browser does not support the video tag.
+    </video>
+
+    <script>
+        // 추가로 loop 속성이 없을 경우 JavaScript로 반복 설정 가능
+        const video = document.getElementById('videoPlayer');
+        video.onended = function() {
+            video.play();
+        };
+    </script>
+</body>
+</html>

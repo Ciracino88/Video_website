@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주식 배당율 계산기</title>
+</head>
+<body>
+    <h1>배당율 계산기</h1>
+    <form method="POST" action="/">
+        <label for="seed">투자로 굴리는 돈 (시드) :</label>
+        <input type="text" id="seed" name="seed" value="{{ seed }}" required><br><br>
+
+        <label for="additional_cash_for_m">매월 추가 투자금 :</label>
+        <input type="text" id="additional_cash_for_m" name="additional_cash_for_m" value="{{ additional_cash_for_m }}" required><br><br>
+
+        <label for="div_rate_for_m">월간 배당율 :</label>
+        <input type="text" id="div_rate_for_m" name="div_rate_for_m" value="{{ div_rate_for_m }}" required><br><br>
+
+        <input type="hidden" id="cash" name="cash" value="{{ cash }}">
+        <input type="hidden" id="result" name="result" value="{{ result }}">
+        <input type="hidden" id="recur_count" name="recur_count" value="{{ recur_count }}">
+        <input type="hidden" id="profit" name="profit" value="{{ profit }}">
+
+        <input type="submit" name="calculate_per_m" value="1달 단위로 계산">
+        <input type="submit" name="calculate_per_y" value="1년 단위로 계산">
+    </form>
+
+    {% if result is not none %}
+        <h3>반복 횟수: {{ recur_count }}</h3>
+        <h3>순수 내 돈: {{ cash }}</h3>
+        <h3>시드: {{ seed }}</h3><br><br>
+        <h2>결과: {{ result }}</h2>
+        <h3>수익금: {{ profit }}</h3>
+    {% endif %}
+</body>
+</html>
