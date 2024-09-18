@@ -7,8 +7,12 @@ app = Flask(__name__)
 # 시드 : 내가 넣은 돈 + 내가 추가로 번 돈
 # 결과 : 시드 * (1 + 수익률)
 # 수익금 : 결과 - 현금
-@app.route('/', methods=['GET', 'POST'])
+
+@app.route('/')
 def index():
+    return render_template('index.html')
+@app.route('/calculate', methods=['GET', 'POST'])
+def calculate():
     # post 이전 : 페이지 초기값
     cal = Calculator(cash=0, div_rate_for_m=0, additional_cash_for_m=0)
 

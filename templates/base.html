@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>base_template</title>
+    <style>
+        /* 프로필 페이지 관련 */
+        .profile_img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .profile_name {
+            font-weight: bold;
+            font-size: 22px;
+            margin: 0;
+            margin-top: 20px;
+        }
+
+        .profile_nickname {
+            color: #808080;
+            margin: 0;
+            margin-top: 5px;
+        }
+
+        .profile_subtopic {
+            font-weight: bold;
+            font-size: 20px;
+            margin: 0;
+            margin-bottom: 10px;
+        }
+
+        /* 기본 속성 관련 */
+        @font-face {
+            font-family: "Maplestory_OTF_Light";
+            src: url('../static/Maplestory_OTF_Light.otf') format('opentype');
+        }
+
+        body {
+            font-family: 'Maplestory_OTF_Light', sans-serif; /* 선택한 폰트 적용 */
+            margin: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            text-align: left; /* 좌측 정렬 */
+            margin: 10px 0 0 10px; /* 리스트 항목 간 여백 */
+            font-size: 16px; /* 폰트 크기 */
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        hr {
+            border: 0; /* 기본 테두리 제거 */
+            height: 2px; /* 구분선 두께 */
+            background-color: gray; /* 구분선 색상 */
+            margin: 20px 0; /* 구분선 위아래 여백 */
+        }
+
+    </style>
+</head>
+<body>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
