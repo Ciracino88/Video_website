@@ -1,6 +1,8 @@
+from boto3 import s3
 from flask import Flask, render_template, request
 from Calculator import Calculator
-
+import boto3
+from botocore.exceptions import NoCredentialsError
 app = Flask(__name__)
 
 # 현금 : 내가 넣은 돈만. 넣은 돈으로 벌어들인 추가금은 x
@@ -10,7 +12,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
+
     return render_template('index.html')
+
+
 @app.route('/calculate', methods=['GET', 'POST'])
 def calculate():
     # post 이전 : 페이지 초기값

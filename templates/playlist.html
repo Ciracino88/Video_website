@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>playlist_page</title>
+</head>
+<body>
+    <div style="display: flex; flex-direction: column; margin: 0; width: 200px">
+        <img src="static/recode_img.jpg" class="recode_img">
+        <p class="playlist_title">Caballero</p>
+        <audio id="audio" style="display: none" controls>
+            <source src="static/test_music.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+        </audio>
+        <div class="playlist_music_playbar_container">
+            <div class="playlist_music_playbar" id="playlist_music_playbar"></div>
+        </div>
+        <button id="playlist_music_playbtn">play</button>
+    </div>
+    <script>
+        const audio = document.getElementById('audio');
+        const playbar = document.getElementById('playlist_music_playbar');
+        const playbtn = document.getElementById('playlist_music_playbtn');
+
+        playbtn.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+                playbtn.textContent = 'pause';
+                document.querySelector('.recode_img').style.animationPlayState = 'running';
+            } else {
+                audio.pause();
+                playbtn.textContent = 'play';
+                document.querySelector('.recode_img').style.animationPlayState = 'paused';
+            }
+        });
+
+        audio.addEventListener('timeupdate', () => {
+            const per = (audio.currentTime / audio.duration) * 100;
+            playbar.style.width = per + '%';
+        });
+    </script>
+</body>
+</html>

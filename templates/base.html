@@ -32,6 +32,58 @@
             margin-bottom: 10px;
         }
 
+        /* 메인 페이지 관련 */
+        .main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+            margin: 0 0 0 20px;
+        }
+
+        .main_recommend_title {
+            font-weight: bold;
+            font-size: 28px;
+        }
+
+        /* 플레이리스트 페이지 관련 */
+        .recode_img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            animation: rotate 2s linear infinite;
+        }
+
+        .playlist_title {
+            text-align: center;
+        }
+
+        .playlist_music_playbar_container {
+            width: 100%;
+            background-color: #ccc;
+            border-radius: 5px;
+            height: 10px;
+            margin-top: 10px;
+        }
+
+        .playlist_music_playbar {
+            height: 100%;
+            background-color: #ffd400;
+            width: 0%;
+            border-radius: 5px;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
         /* 기본 속성 관련 */
         @font-face {
             font-family: "Maplestory_OTF_Light";
@@ -85,6 +137,7 @@
         button:hover {
             background-color: #40E0D0;
         }
+
 
 
     </style>
