@@ -61,11 +61,34 @@
         .main {
             display: flex;
             flex-direction: column;
-            justify-content: center;
             text-align: center;
             width: 100%;
+            height: 100vh;
             margin-left: 80px;
             margin-right: 80px;
+        }
+
+        .main_logo {
+            font-weight: bold;
+            font-size: 55px;
+            margin: 0;
+            background: linear-gradient(90deg, #ff7e5f, #feb47b, #6a11cb, #2575fc);
+            background-size: 300%;
+            animation: gradientAnimation 5s ease infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; /* 텍스트를 투명하게 설정 */
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
         .main_recommend_title {

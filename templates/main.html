@@ -6,8 +6,10 @@
 </head>
 <body>
     <div class="main">
-        <p>Recent Posts</p>
-        <hr>
+        <p class="main_logo">Ciracino's</p>
+        <p class="main_logo">Local Space</p>
+        <br>
+        <p style="text-align: left; font-size: 30px; margin: 30px 0 15px 0;">Recent Posts</p>
         <ul>
             {% for post in posts %}
                 <li>
@@ -20,6 +22,7 @@
                 <li>NO posts found.</li>
             {% endfor %}
         </ul>
+        <hr>
     </div>
 </body>
 </html>
