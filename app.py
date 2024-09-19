@@ -3,6 +3,7 @@ from flask import Flask, render_template, request, redirect, url_for
 from Calculator import Calculator
 from Post import Post
 from datetime import datetime
+from Shorts_upload import *
 
 app = Flask(__name__)
 
@@ -61,6 +62,13 @@ def thinking():
     posts = cur.execute('SELECT * FROM posts ORDER BY id DESC').fetchall()
     conn.close()
     return render_template('thinking.html', posts=posts)
+
+@app.route('/shorts', methods=["GET", "POST"])
+def shorts():
+    if request.method == 'POST':
+        if (upload_file(request.files) != None):
+            return redirect(url_for('shorts'))
+    return render_template('shorts.html')
 
 @app.route('/calculator', methods=['GET', 'POST'])
 def calculate():

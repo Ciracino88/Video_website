@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00ee6b02-3e6c-4123-ad0d-9e7b36aa7e89" name="Changes" comment="업데이트 내용&#10;1. 메인 페이지에 최근 게시물을 3개까지만 보이도록 수정&#10;2. 프로필 사이드바의 Thinking 페이지 추가">
+    <list default="true" id="00ee6b02-3e6c-4123-ad0d-9e7b36aa7e89" name="Changes" comment="Shorts 페이지 추가 (영상 업로드 가능)">
+      <change afterPath="$PROJECT_DIR$/Shorts_upload.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/S3.py" beforeDir="false" afterPath="$PROJECT_DIR$/S3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/test2.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/shorts.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shorts.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +25,8 @@
       <list>
         <option value="Flask Main" />
         <option value="SQL File" />
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -65,24 +71,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Flask server.Video_website.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Flask server.Video_website.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/static" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/static" />
     </key>
   </component>
   <component name="RunManager">
@@ -124,7 +130,9 @@
       <workItem from="1726562741611" duration="4542000" />
       <workItem from="1726582870633" duration="28081000" />
       <workItem from="1726716437077" duration="10250000" />
-      <workItem from="1726735739846" duration="6453000" />
+      <workItem from="1726735739846" duration="10461000" />
+      <workItem from="1726761562351" duration="2320000" />
+      <workItem from="1726763888255" duration="5925000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -214,7 +222,31 @@
       <option name="project" value="LOCAL" />
       <updated>1726754253067</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="업데이트 내용&#10;1. 메인 페이지 로고 추가&#10;2. 메인 페이지가 상단을 기준으로 정렬되게끔 수정">
+      <option name="closed" value="true" />
+      <created>1726756302191</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1726756302191</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Shorts 페이지 추가">
+      <option name="closed" value="true" />
+      <created>1726769544343</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1726769544343</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Shorts 페이지 추가 (영상 업로드 가능)">
+      <option name="closed" value="true" />
+      <created>1726769628232</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1726769628232</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,9 +275,12 @@
     <MESSAGE value="업로드 페이지 및 업로드 기능 추가" />
     <MESSAGE value="게시물 페이지 및 자동 줄바꿈 기능 추가" />
     <MESSAGE value="업데이트 내용&#10;1. 메인 페이지에 최근 게시물을 3개까지만 보이도록 수정&#10;2. 프로필 사이드바의 Thinking 페이지 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="업데이트 내용&#10;1. 메인 페이지에 최근 게시물을 3개까지만 보이도록 수정&#10;2. 프로필 사이드바의 Thinking 페이지 추가" />
+    <MESSAGE value="업데이트 내용&#10;1. 메인 페이지 로고 추가&#10;2. 메인 페이지가 상단을 기준으로 정렬되게끔 수정" />
+    <MESSAGE value="Shorts 페이지 추가" />
+    <MESSAGE value="Shorts 페이지 추가 (영상 업로드 가능)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Shorts 페이지 추가 (영상 업로드 가능)" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Video_website$Video_website.coverage" NAME="Video_website Coverage Results" MODIFIED="1726756000156" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Video_website$Video_website.coverage" NAME="Video_website Coverage Results" MODIFIED="1726769485568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

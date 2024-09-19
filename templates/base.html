@@ -57,6 +57,38 @@
             margin-bottom: 10px;
         }
 
+        .profile_subtopic_li > a:hover {
+            color: #40E0D0;
+        }
+
+        /* 쇼츠 페이지 관련 */
+        .shorts_file_upload {
+            display: flex;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            background-color: #40E0D0;
+            color: #ffffff;
+            border-radius: 5px;
+            font-size: 30px;
+            border: 2px solid transparent;
+            transition: background-color 0.3s ease;
+            height:35vw;
+            margin-bottom: 30px;
+        }
+
+        .shorts_file_upload:hover {
+            background-color: #4169E1;
+        }
+
+        .shorts_file_upload:focus {
+            outline: none;
+            border: 2px solid #333;
+        }
+
+
+
         /* 메인 페이지 관련 */
         .main {
             display: flex;
@@ -70,7 +102,7 @@
 
         .main_logo {
             font-weight: bold;
-            font-size: 55px;
+            font-size: 5vw;
             margin: 0;
             background: linear-gradient(90deg, #ff7e5f, #feb47b, #6a11cb, #2575fc);
             background-size: 300%;
@@ -241,6 +273,11 @@
         textarea {
             height: 300px;
             resize: vertical;
+        }
+
+        /* 쇼츠 페이지에서 파일 업로드하는 부분*/
+        input[type="file"] {
+            display: none;
         }
 
     </style>
