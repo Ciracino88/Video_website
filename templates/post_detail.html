@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div style="margin: 50px; text-align: left;">
+        <p style="font-size: 50px; font-weight: bold; margin-bottom: 40px">{{ post['title'] }}</p>
+        <p>{{ post['upload_date'] }}</p>
+        <br>
+        <p style="font-size: 20px; white-space: pre-wrap;"> {{ post['content'] }}</p>
+    </div>
+{% endblock %}
