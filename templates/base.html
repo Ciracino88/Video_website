@@ -4,12 +4,37 @@
     <meta charset="UTF-8">
     <title>base_template</title>
     <style>
+        /* 헤더 바 관련 */
+        .header_bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            color: #ffffff;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        .header_bar_nav a {
+            font-size: 1em;
+            margin-left: 15px;
+        }
+
+        .header_bar_nav a:hover {
+            color: #40E0D0;
+        }
+
+
         /* 프로필 페이지 관련 */
         .profile_img {
             width: 200px;
             height: 200px;
             border-radius: 50%;
             object-fit: cover;
+            margin-top: 20px;
         }
 
         .profile_name {
@@ -39,7 +64,8 @@
             justify-content: center;
             text-align: center;
             width: 100%;
-            margin: 0 0 0 20px;
+            margin-left: 80px;
+            margin-right: 80px;
         }
 
         .main_recommend_title {
@@ -143,6 +169,15 @@
     </style>
 </head>
 <body>
+    <header class="header_bar">
+        <a href="#" class="logo">Ciracino</a>
+        <nav class="header_bar_nav">
+            <a href="#">Post</a>
+            <a href="#">Login</a>
+            <a href="#">Point</a>>
+        </nav>
+    </header>
+    <hr>
     {% block content %}
     {% endblock %}
 </body>
