@@ -17,12 +17,11 @@ def index():
     conn.row_factory = sqlite3.Row
     cur = conn.cursor()
 
-    # posts 테이블에 존재하는 모든 데이터를 리스트 형태로 가져옴
-    posts = cur.execute('SELECT * FROM posts').fetchall()
+    # 데이터 최신순으로 3개만 가져옴
+    posts = cur.execute('SELECT * FROM posts ORDER BY id DESC LIMIT 3').fetchall()
     conn.close()
 
     return render_template('index.html', posts=posts)
-
 
 @app.route('/post', methods=["GET", "POST"])
 def post():
@@ -53,6 +52,15 @@ def post_detail(post_id):
     else:
         return "Post not found", 404
 
+@app.route('/thinking')
+def thinking():
+    conn = sqlite3.connect('database.db')
+    conn.row_factory = sqlite3.Row
+    cur = conn.cursor()
+
+    posts = cur.execute('SELECT * FROM posts ORDER BY id DESC').fetchall()
+    conn.close()
+    return render_template('thinking.html', posts=posts)
 
 @app.route('/calculator', methods=['GET', 'POST'])
 def calculate():

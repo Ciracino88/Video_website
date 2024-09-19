@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div style="margin: 30px;">
+        {% for post in posts %}
+            <a href="{{ url_for('post_detail', post_id=post['id']) }}">
+                <p style="font-size: 30px; font-weight: bold; margin-bottom: 5px;">{{ post['title'] }}</p>
+                <p>{{ post['upload_date'] }}</p>
+            </a>
+        {% endfor %}
+    </div>
+{% endblock %}
