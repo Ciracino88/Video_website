@@ -1,8 +1,9 @@
-from boto3 import s3
-from flask import Flask, render_template, request
+import sqlite3
+from flask import Flask, render_template, request, redirect, url_for
 from Calculator import Calculator
-import boto3
-from botocore.exceptions import NoCredentialsError
+from Post import Post
+from datetime import datetime
+
 app = Flask(__name__)
 
 # 현금 : 내가 넣은 돈만. 넣은 돈으로 벌어들인 추가금은 x
@@ -12,11 +13,32 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
+    conn = sqlite3.connect('database.db')
+    conn.row_factory = sqlite3.Row
+    cur = conn.cursor()
 
-    return render_template('index.html')
+    # posts 테이블에 존재하는 모든 데이터를 리스트 형태로 가져옴
+    posts = cur.execute('SELECT * FROM posts').fetchall()
+    conn.close()
+
+    return render_template('index.html', posts=posts)
 
 
-@app.route('/calculate', methods=['GET', 'POST'])
+@app.route('/post', methods=["GET", "POST"])
+def post():
+    if request.method == "POST":
+        post = Post(
+            title = request.form['post_title'],
+            content = request.form['post_content'],
+            upload_date = datetime.now().strftime("%Y.%m.%d")
+        )
+
+        post.upload_post()
+        return redirect(url_for('index'))
+
+    return render_template('post.html')
+
+@app.route('/calculator', methods=['GET', 'POST'])
 def calculate():
     # post 이전 : 페이지 초기값
     cal = Calculator(cash=0, div_rate_for_m=0, additional_cash_for_m=0)

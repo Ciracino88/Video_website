@@ -73,6 +73,19 @@
             font-size: 28px;
         }
 
+        .main_recent_post {
+            text-align: left;
+        }
+
+        .main_recent_post_date {
+            font-size: small;
+        }
+
+        .main_recent_post_title {
+            font-size: 18px;
+            color: #4169E1;
+        }
+
         /* 플레이리스트 페이지 관련 */
         .recode_img {
             width: 200px;
@@ -110,6 +123,38 @@
             }
         }
 
+
+        /* 포스트 페이지 관련 */
+        .post_container {
+            width: 80%;
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .post_form {
+            margin-bottom: 20px;
+        }
+
+        .post_form label {
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        .post_form input[type="text"], .post_form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+
         /* 기본 속성 관련 */
         @font-face {
             font-family: "Maplestory_OTF_Light";
@@ -119,6 +164,11 @@
         body {
             font-family: 'Maplestory_OTF_Light', sans-serif; /* 선택한 폰트 적용 */
             margin: 20px;
+        }
+
+        h1 {
+            text-align: Center;
+            color: #333;
         }
 
         ul {
@@ -164,15 +214,19 @@
             background-color: #40E0D0;
         }
 
-
+        /* 포스트 페이지 기준 */
+        textarea {
+            height: 300px;
+            resize: vertical;
+        }
 
     </style>
 </head>
 <body>
     <header class="header_bar">
-        <a href="#" class="logo">Ciracino</a>
+        <a href="/" class="logo">Ciracino</a>
         <nav class="header_bar_nav">
-            <a href="#">Post</a>
+            <a href="/post">Post</a>
             <a href="#">Login</a>
             <a href="#">Point</a>>
         </nav>
