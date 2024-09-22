@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, session
 import sqlite3
 
 index_bp = Blueprint('index', __name__)
@@ -13,5 +13,6 @@ def index():
     posts = cur.execute('SELECT * FROM posts ORDER BY id DESC LIMIT 3').fetchall()
     conn.close()
 
-    print("index page")
+    print(session.get('username'))
+
     return render_template('index.html', posts=posts)

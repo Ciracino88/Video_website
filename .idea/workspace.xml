@@ -4,31 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00ee6b02-3e6c-4123-ad0d-9e7b36aa7e89" name="Changes" comment="Shorts 페이지 추가 (영상 업로드 가능)">
-      <change afterPath="$PROJECT_DIR$/Catto.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blueprints/calculator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blueprints/index.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blueprints/post.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blueprints/post_detail.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blueprints/shorts.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blueprints/thinking.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blueprints/top_nav.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/catto_img.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/top_nav.html" afterDir="false" />
+    <list default="true" id="00ee6b02-3e6c-4123-ad0d-9e7b36aa7e89" name="Changes" comment="업데이트 내역&#10;1. blueprint 로 랜더링 관리&#10;2. 댓글창 추가. 기능은 추후 업데이트">
+      <change afterPath="$PROJECT_DIR$/blueprints/login.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Post.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shorts_upload.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/post.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/post.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/post_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/post_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/shorts.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shorts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/thinking.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/thinking.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blueprints/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/blueprints/index.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blueprints/top_nav.py" beforeDir="false" afterPath="$PROJECT_DIR$/blueprints/top_nav.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/top_nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/top_nav.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,20 +70,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Flask server.Video_website.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Flask server.Video_website.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/templates" />
@@ -154,7 +138,7 @@
       <workItem from="1726790172541" duration="2103000" />
       <workItem from="1726792980564" duration="5008000" />
       <workItem from="1726798004912" duration="1121000" />
-      <workItem from="1726799588319" duration="16807000" />
+      <workItem from="1726799588319" duration="20895000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -276,7 +260,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726769831476</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="업데이트 내역&#10;1. blueprint 로 랜더링 관리&#10;2. 댓글창 추가. 기능은 추후 업데이트">
+      <option name="closed" value="true" />
+      <created>1727033429978</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1727033429978</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,9 +300,10 @@
     <MESSAGE value="업데이트 내용&#10;1. 메인 페이지 로고 추가&#10;2. 메인 페이지가 상단을 기준으로 정렬되게끔 수정" />
     <MESSAGE value="Shorts 페이지 추가" />
     <MESSAGE value="Shorts 페이지 추가 (영상 업로드 가능)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Shorts 페이지 추가 (영상 업로드 가능)" />
+    <MESSAGE value="업데이트 내역&#10;1. blueprint 로 랜더링 관리&#10;2. 댓글창 추가. 기능은 추후 업데이트" />
+    <option name="LAST_COMMIT_MESSAGE" value="업데이트 내역&#10;1. blueprint 로 랜더링 관리&#10;2. 댓글창 추가. 기능은 추후 업데이트" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Video_website$Video_website.coverage" NAME="Video_website Coverage Results" MODIFIED="1727033282773" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Video_website$Video_website.coverage" NAME="Video_website Coverage Results" MODIFIED="1727037146956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -4,7 +4,12 @@
 	<a href="/" class="logo">Ciracino</a>
     <nav class="header_bar_nav">
         <a href="/post">Post</a>
-        <a href="/login">Login</a>
+        {% if session.get('username') %}
+            <a>{{ session.get('username') }}</a>
+            <a href="/logout">logout</a>
+        {% else %}
+            <a href="/login">Login</a>
+        {% endif %}
     </nav>
 {% endblock %}
 {% block content %}
