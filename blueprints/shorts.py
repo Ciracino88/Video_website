@@ -1,7 +1,17 @@
+from flask import Blueprint, render_template, request, redirect, url_for
 from werkzeug.utils import secure_filename
 from S3 import s3_class
 from tqdm import tqdm
 import os
+
+shorts_bp = Blueprint('shorts', __name__)
+
+@shorts_bp.route('/shorts', methods=["GET", "POST"])
+def shorts():
+    if request.method == 'POST':
+        if (upload_file(request.files) != None):
+            return redirect(url_for('shorts'))
+    return render_template('shorts.html')
 
 allowed_extensions = {'mp4', 'mov', 'avi'}
 s3 = s3_class()
@@ -18,7 +28,6 @@ class Progress_percentage:
         self._tqdm.update(bytes_amount)
         percentage = (self._seen_so_far / self.file_size) * 100
         print(f"upload progress: {percentage:.2f}%")
-
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in allowed_extensions

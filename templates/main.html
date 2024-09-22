@@ -13,7 +13,7 @@
         <ul>
             {% for post in posts %}
                 <li>
-                    <a href="{{ url_for('post_detail', post_id=post['id']) }}" class="main_recent_post">
+                    <a href="{{ url_for('post_detail.post_detail', post_id=post['id']) }}" class="main_recent_post">
                         <p class="main_recent_post_date">{{ post['upload_date'] }}</p>
                         <p class="main_recent_post_title">{{ post['title'] }}</p>
                     </a>

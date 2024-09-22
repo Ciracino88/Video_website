@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "top_nav.html" %}
 
 {% block content %}
     <div style="margin: 50px; text-align: left;">
@@ -6,5 +6,12 @@
         <p>{{ post['upload_date'] }}</p>
         <br>
         <p style="font-size: 20px; white-space: pre-wrap;"> {{ post['content'] }}</p>
+        <hr>
+        <p>댓글 999+</p>
+        {% for comment in comments %}
+            <p>{{ comment['content'] }}</p>
+        {% else %}
+            <p>댓글이 없습니다.</p>
+        {% endfor %}
     </div>
 {% endblock %}

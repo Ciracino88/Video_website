@@ -5,15 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00ee6b02-3e6c-4123-ad0d-9e7b36aa7e89" name="Changes" comment="Shorts 페이지 추가 (영상 업로드 가능)">
-      <change afterPath="$PROJECT_DIR$/Shorts_upload.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Catto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blueprints/calculator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blueprints/index.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blueprints/post.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blueprints/post_detail.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blueprints/shorts.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blueprints/thinking.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blueprints/top_nav.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/catto_img.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/top_nav.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/S3.py" beforeDir="false" afterPath="$PROJECT_DIR$/S3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Post.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shorts_upload.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/test2.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/post.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/post.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/post_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/post_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/shorts.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shorts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/thinking.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/thinking.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,8 +102,10 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$/templates/index" />
       <recent name="$PROJECT_DIR$/static" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager">
@@ -132,7 +149,12 @@
       <workItem from="1726716437077" duration="10250000" />
       <workItem from="1726735739846" duration="10461000" />
       <workItem from="1726761562351" duration="2320000" />
-      <workItem from="1726763888255" duration="5925000" />
+      <workItem from="1726763888255" duration="6077000" />
+      <workItem from="1726770913278" duration="168000" />
+      <workItem from="1726790172541" duration="2103000" />
+      <workItem from="1726792980564" duration="5008000" />
+      <workItem from="1726798004912" duration="1121000" />
+      <workItem from="1726799588319" duration="16807000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -246,7 +268,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726769628232</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Shorts 페이지 추가 (영상 업로드 가능)">
+      <option name="closed" value="true" />
+      <created>1726769831476</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1726769831476</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,6 +311,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Shorts 페이지 추가 (영상 업로드 가능)" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Video_website$Video_website.coverage" NAME="Video_website Coverage Results" MODIFIED="1726769485568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Video_website$Video_website.coverage" NAME="Video_website Coverage Results" MODIFIED="1727033282773" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
