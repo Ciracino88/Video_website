@@ -5,7 +5,7 @@
     <nav class="header_bar_nav">
         <a href="/post">Post</a>
         {% if session.get('username') %}
-            <a>{{ session.get('username') }}</a>
+            <a>{{ session['username'] }}</a>
             <a href="/logout">logout</a>
         {% else %}
             <a href="/login">Login</a>

@@ -6,12 +6,21 @@
         <p>{{ post['upload_date'] }}</p>
         <br>
         <p style="font-size: 20px; white-space: pre-wrap;"> {{ post['content'] }}</p>
+        <br>
         <hr>
-        <p>댓글 999+</p>
-        {% for comment in comments %}
-            <p>{{ comment['content'] }}</p>
+        {% if comments %}
+            {% for comment in comments %}
+                <div style="display: flex; justify-content: space-between;">
+                    <p>{{ comment['name'] }}</p>
+                    <p>{{ comment['timestamp'] }}</p>
+                </div>
+                <p>{{ comment['content'] }}</p>
+            {% endfor %}
         {% else %}
-            <p>댓글이 없습니다.</p>
-        {% endfor %}
+            <a>첫 댓글을 달아보세요!</a>
+        {% endif %}
+        <form method="POST" action="{{ url_for('post_detail.comment', post_id=post['id']) }}">
+            <input type="text" name="comment" placeholder="댓글 달기...">
+        </form>
     </div>
 {% endblock %}
