@@ -14,7 +14,7 @@ def post():
         )
 
         post.upload_post()
-        return redirect(url_for('index'))
+        return redirect(url_for('index.index'))
 
     return render_template('post.html')
 

@@ -8,19 +8,41 @@
         <p style="font-size: 20px; white-space: pre-wrap;"> {{ post['content'] }}</p>
         <br>
         <hr>
-        {% if comments %}
+        {% if 1 <= comments|length <= 3 %}
             {% for comment in comments %}
-                <div style="display: flex; justify-content: space-between;">
-                    <p>{{ comment['name'] }}</p>
-                    <p>{{ comment['timestamp'] }}</p>
-                </div>
-                <p>{{ comment['content'] }}</p>
+                {% include 'comment.html' with context %}
             {% endfor %}
+        {% elif comments|length >= 4 %}
+            {% for i in range(3) %}
+                {% set comment=comments[i] %}
+                {% include 'comment.html' with context %}
+            {% endfor %}
+                <a href="#" onclick="view_comment(); return false;">{{ comments|length - 3 }}개의 댓글 더보기</a>
+                <dialog id="comment_view">
+                    <button class="comment_view_close_btn">x</button>
+                    {% for comment in comments %}
+                        {% include 'comment.html' with context %}
+                    {% endfor %}
+                </dialog>
         {% else %}
             <a>첫 댓글을 달아보세요!</a>
         {% endif %}
         <form method="POST" action="{{ url_for('post_detail.comment', post_id=post['id']) }}">
-            <input type="text" name="comment" placeholder="댓글 달기...">
+            <input class="post_detail_comment_input" type="text" name="comment" placeholder="댓글 달기...">
         </form>
     </div>
+{% endblock %}
+{% block script %}
+    <script>
+        var is_view_comment = false;
+        const comment_view = document.getElementById('comment_view');
+        function view_comment() {
+            is_view_comment = !is_view_comment;
+            if (is_view_comment) {
+                comment_view.showModal();
+            } else {
+                comment_view.close();
+            }
+        }
+    </script>
 {% endblock %}
