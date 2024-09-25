@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00ee6b02-3e6c-4123-ad0d-9e7b36aa7e89" name="Changes" comment="댓글 기능 구현 완료">
-      <change afterPath="$PROJECT_DIR$/templates/comment.html" afterDir="false" />
+    <list default="true" id="00ee6b02-3e6c-4123-ad0d-9e7b36aa7e89" name="Changes" comment="댓글 더보기 창 재구성&#10;1. 본문과 댓글창 화면으로 나눔.">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blueprints/post.py" beforeDir="false" afterPath="$PROJECT_DIR$/blueprints/post.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/post_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/post_detail.html" afterDir="false" />
     </list>
@@ -142,7 +140,11 @@
       <workItem from="1726792980564" duration="5008000" />
       <workItem from="1726798004912" duration="1121000" />
       <workItem from="1726799588319" duration="26299000" />
-      <workItem from="1727057221895" duration="11027000" />
+      <workItem from="1727057221895" duration="11193000" />
+      <workItem from="1727144284687" duration="5585000" />
+      <workItem from="1727226039726" duration="903000" />
+      <workItem from="1727236977960" duration="1398000" />
+      <workItem from="1727254900068" duration="2521000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -288,7 +290,23 @@
       <option name="project" value="LOCAL" />
       <updated>1727053419812</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="댓글 더보기 창 추가">
+      <option name="closed" value="true" />
+      <created>1727144264194</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1727144264194</updated>
+    </task>
+    <task id="LOCAL-00020" summary="댓글 더보기 창 재구성&#10;1. 본문과 댓글창 화면으로 나눔.">
+      <option name="closed" value="true" />
+      <created>1727257379100</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1727257379100</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,9 +341,11 @@
     <MESSAGE value="업데이트 내역&#10;1. blueprint 로 랜더링 관리&#10;2. 댓글창 추가. 기능은 추후 업데이트" />
     <MESSAGE value="로그인 기능 추가" />
     <MESSAGE value="댓글 기능 구현 완료" />
-    <option name="LAST_COMMIT_MESSAGE" value="댓글 기능 구현 완료" />
+    <MESSAGE value="댓글 더보기 창 추가" />
+    <MESSAGE value="댓글 더보기 창 재구성&#10;1. 본문과 댓글창 화면으로 나눔." />
+    <option name="LAST_COMMIT_MESSAGE" value="댓글 더보기 창 재구성&#10;1. 본문과 댓글창 화면으로 나눔." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Video_website$Video_website.coverage" NAME="Video_website Coverage Results" MODIFIED="1727144113220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Video_website$Video_website.coverage" NAME="Video_website Coverage Results" MODIFIED="1727257154917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -19,10 +19,22 @@
             {% endfor %}
                 <a href="#" onclick="view_comment(); return false;">{{ comments|length - 3 }}개의 댓글 더보기</a>
                 <dialog id="comment_view">
-                    <button class="comment_view_close_btn">x</button>
-                    {% for comment in comments %}
-                        {% include 'comment.html' with context %}
-                    {% endfor %}
+                    <button class="comment_view_close_btn" onclick="view_comment(); return false;">x</button>
+                    <div class="comment_view_content">
+                        <div class="comment_view_header">
+                            <h2>{{ post['title'] }}</h2>
+                        </div>
+                        <div class="comment_view_body">
+                            <div class="comment_view_left">
+                                <p> {{ post['content'] }}</p>
+                            </div>
+                            <div class="comment_view_right">
+                                {% for comment in comments %}
+                                    {% include 'comment.html' with context %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
                 </dialog>
         {% else %}
             <a>첫 댓글을 달아보세요!</a>
@@ -40,8 +52,10 @@
             is_view_comment = !is_view_comment;
             if (is_view_comment) {
                 comment_view.showModal();
+                document.body.classList.add('no-scroll');
             } else {
                 comment_view.close();
+                document.body.classList.remove('no-scroll');
             }
         }
     </script>

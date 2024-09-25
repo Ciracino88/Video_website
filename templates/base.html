@@ -15,6 +15,10 @@
             margin: 20px;
         }
 
+        body.no-scroll {
+            overflow: hidden;
+        }
+
         h1 {
             text-align: Center;
             color: #333;
@@ -42,6 +46,14 @@
             height: 2px; /* 구분선 두께 */
             background-color: gray; /* 구분선 색상 */
             margin: 20px 0; /* 구분선 위아래 여백 */
+        }
+
+        dialog {
+            width: 80%;
+            padding: 0;
+            border: none;
+            border-radius: 8px;
+            background-color: #ffffff;
         }
 
         button {
@@ -353,17 +365,51 @@
 
         /* 게시물 상세 페이지 댓글 더보기 창 관련 */
 
+        #comment_view {
+            overflow: hidden;
+        }
         .comment_view_close_btn {
+            all: unset;
+            cursor: pointer;
             color: #000000;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
+            border: none;
+            padding: 5px 10px;
             display: inline-block;
             font-size: 16px;
-            margin: 4px 2px;
-            border: none;
-            cursor: pointer;
         }
+
+        .comment_view_content {
+            display: flex;
+            flex-direction: column;
+            height: 70vh;
+        }
+
+        .comment_view_header {
+            position: fixed;
+            color: #000000;
+            padding: 10px;
+        }
+
+        .comment_view_body {
+            display: flex;
+            flex: 1;
+        }
+
+        .comment_view_left {
+            flex: 1;
+            padding: 10px;
+            overflow: auto;
+            max-height: 56vh;
+            margin: 10vh 1px 0 0;
+            white-space: pre-wrap;
+        }
+        .comment_view_right {
+            flex: 1;
+            padding: 10px;
+            overflow: auto;
+            max-height: 66vh;
+        }
+
 
     </style>
 </head>
