@@ -13,6 +13,4 @@ def index():
     posts = cur.execute('SELECT * FROM posts ORDER BY id DESC LIMIT 3').fetchall()
     conn.close()
 
-    print(session.get('username'))
-
     return render_template('index.html', posts=posts)

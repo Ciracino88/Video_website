@@ -1,0 +1,20 @@
+{% extends 'top_nav.html' %}
+
+{% block content %}
+    <p>멋진 글에 댓글을 남깁니다</p>
+    {% if generated_comments %}
+        <div class="catto_comments">
+            {% for comment in generated_comments %}
+                <div class="catto_comment_panel">
+                    <h3>{{ comment['post_id'] }}번째 글에 대해 답변을 남겼어요!</h3>
+                    <p>{{ comment['content'] }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>아직 멋진 글을 찾지 못했어요...</p>
+    {% endif %}
+    <form action="/catto", method="POST">
+        <button type="submit">Generate Comment</button>
+    </form>
+{% endblock %}

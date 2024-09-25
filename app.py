@@ -10,6 +10,7 @@ from blueprints.thinking import thinking_bp
 from blueprints.post_detail import post_detail_bp
 from blueprints.top_nav import top_nav_bp
 from blueprints.login import login_bp
+from blueprints.catto import catto_bp
 
 load_dotenv()
 app = Flask(__name__)
@@ -22,5 +23,8 @@ app.register_blueprint(calculator_bp)
 app.register_blueprint(post_detail_bp)
 app.register_blueprint(top_nav_bp)
 app.register_blueprint(login_bp)
+
+app.register_blueprint(catto_bp)
+
 if __name__ == '__main__':
     app.run(debug=True)
