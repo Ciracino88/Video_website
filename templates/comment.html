@@ -1,5 +1,10 @@
 <div style="display: flex; flex-direction: row;">
-    <p style="font-weight: bold; margin-right: 10px;">{{ comment['name'] }}</p>
-    <p style="font-size: 15px; margin: 0; margin-top: 17px;">{{ comment['content'] }}</p>
+    {% if comment['bot'] == 0 %}
+        <p style="font-weight: bold; margin-right: 10px;">{{ comment['name'] }}</p>
+        <p style="font-size: 15px; margin: 0; margin-top: 17px;">{{ comment['content'] }}</p>
+    {% else %}
+        <p style="font-weight: bold; margin-right: 10px;">{{ comment['name'] }}🤖</p>
+        <p style="font-size: 15px; margin: 0; margin-top: 17px;">{{ comment['content'] }}</p>
+    {% endif %}
 </div>
 <p style="margin-top: 0;">{{ comment['timestamp'] }}</p>

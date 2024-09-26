@@ -1,13 +1,18 @@
 {% extends 'top_nav.html' %}
 
 {% block content %}
-    <p>멋진 글에 댓글을 남깁니다</p>
+    <p>{{ intro }}</p>
     {% if generated_comments %}
         <div class="catto_comments">
+            <p>{{ generated_comments|length }}개의 답변이 있습니다.</p>
             {% for comment in generated_comments %}
                 <div class="catto_comment_panel">
                     <h3>{{ comment['post_id'] }}번째 글에 대해 답변을 남겼어요!</h3>
-                    <p>{{ comment['content'] }}</p>
+                    <p style="padding: 0 20px 0 20px;">{{ comment['content'] }}</p>
+                    <form class="catto_comment_footer" action="/value_generated_comment" method="POST">
+                        <button type="submit" name="value_generated_comment" value="save">Good</button>
+                        <button type="submit" name="value_generated_comment" value="delete">Bad</button>
+                    </form>
                 </div>
             {% endfor %}
         </div>

@@ -27,9 +27,9 @@ def comment(post_id):
     cur = conn.cursor()
 
     if request.method == 'POST':
-        cur.execute('''INSERT INTO comments (post_id, content, name)
-        VALUES (?, ?, ?)
-        ''', (post_id, request.form['comment'], session['username']))
+        cur.execute('''INSERT INTO comments (post_id, content, name, bot)
+        VALUES (?, ?, ?, ?)
+        ''', (post_id, request.form['comment'], session['username'], 0))
         conn.commit()
         conn.close()
 
