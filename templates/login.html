@@ -1,20 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    <form method="POST" action="/login">
-        <div>
-            <label for="username">username</label>
-            <input type="text" name="username">
+{% extends "top_nav.html" %}
+
+{% block content %}
+    <div style="display: flex; flex-direction: column;">
+        <div style="justify-content: center;">
+            <form method="POST" action="/login" style="justify-content: center;">
+                <label for="username">username</label>
+                <input type="text" name="username">
+                <button type="submit" name="login" value="login_by_custom">Login</button>
+                <button type="submit" name="login" value="login_by_recommended">Login by using recommended username</button>
+            </form>
+            <ul>
+                <li>유저 이름만으로 로그인 가능!</li>
+                <li>댓글을 남겨보세요!!</li>
+            </ul>
         </div>
-        <button type="submit">Login</button>
-    </form>
-    <ul>
-        <li>유저 이름만으로 로그인 가능!.</li>
-        <li>댓글을 남겨보세요!!</li>
-    </ul>
-</body>
-</html>
+    </div>
+{% endblock %}

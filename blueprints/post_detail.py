@@ -27,10 +27,14 @@ def comment(post_id):
     cur = conn.cursor()
 
     if request.method == 'POST':
-        cur.execute('''INSERT INTO comments (post_id, content, name, bot)
-        VALUES (?, ?, ?, ?)
-        ''', (post_id, request.form['comment'], session['username'], 0))
-        conn.commit()
-        conn.close()
+        if session['username'] == None:
+            return render_template('login.html')
 
-        return redirect(url_for("post_detail.post_detail", post_id=post_id))
+        else:
+            cur.execute('''INSERT INTO comments (post_id, content, name, bot)
+            VALUES (?, ?, ?, ?)
+            ''', (post_id, request.form['comment'], session['username'], 0))
+            conn.commit()
+            conn.close()
+
+            return redirect(url_for("post_detail.post_detail", post_id=post_id))

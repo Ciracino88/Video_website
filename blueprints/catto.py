@@ -13,13 +13,12 @@ catto_bp = Blueprint('catto', __name__)
 
 load_dotenv()
 
+# api key 설정
+client = OpenAI(
+    api_key=os.getenv("CATTO_API_KEY"),
+)
 @catto_bp.route('/catto', methods=['GET', 'POST'])
 def catto():
-    # api key 설정
-    client = OpenAI(
-        api_key=os.getenv("CATTO_API_KEY"),
-    )
-
     generated_comments, intro = init_catto(client)
 
     # 댓글 생성 요청이 있다면
@@ -92,3 +91,18 @@ def generate_comment(client):
     conn.close()
 
     return
+
+# username 추천
+def generate_username_for_login():
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[
+            {"role": "user",
+             "content": "시각적 형용사와 동물 이름을 조합한 닉네임을 하나 만들어줘. 반환 형식은, '귀여운 고양이' 처럼 되어야 해. 그리고 최근에 사용한 단어는 가급적이면 사용을 자제해줬으면 해."}
+        ],
+        temperature=0.9,  # 출력의 창의성 조절
+        max_tokens=100  # 출력될 토큰 수의 최대값 설정
+    )
+
+    generated_username = response.choices[0].message.content
+    return generated_username

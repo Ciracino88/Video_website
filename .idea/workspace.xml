@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00ee6b02-3e6c-4123-ad0d-9e7b36aa7e89" name="Changes" comment="업데이트 내역&#10;1. catto 페이지 랜더링 시, catto 가 자신을 스스로 소개하는 기능 추가.&#10;2. catto 동작 순서 : 데이터 로드 및 자기 소개 - 페이지 랜더링&#10;3. catto 성능 개선 : 프롬프트로 자기 소개 예시문을 주고, 창의성을 낮춰 예시에 의존하게 만듬.">
+    <list default="true" id="00ee6b02-3e6c-4123-ad0d-9e7b36aa7e89" name="Changes" comment="업데이트 내역&#10;1. catto 가 작성한 댓글의 게시물을 확인할 수 있는 하이퍼링크 추가.&#10;2. 템플릿 수정 시, 자동 리로드 되도록 설정">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/catto.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/catto.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blueprints/catto.py" beforeDir="false" afterPath="$PROJECT_DIR$/blueprints/catto.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blueprints/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/blueprints/login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blueprints/post_detail.py" beforeDir="false" afterPath="$PROJECT_DIR$/blueprints/post_detail.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +146,7 @@
       <workItem from="1727144284687" duration="5585000" />
       <workItem from="1727226039726" duration="903000" />
       <workItem from="1727236977960" duration="1398000" />
-      <workItem from="1727254900068" duration="21367000" />
+      <workItem from="1727254900068" duration="28792000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -330,7 +332,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727334930772</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="업데이트 내역&#10;1. catto 가 작성한 댓글의 게시물을 확인할 수 있는 하이퍼링크 추가.&#10;2. 템플릿 수정 시, 자동 리로드 되도록 설정">
+      <option name="closed" value="true" />
+      <created>1727401266742</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1727401266742</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -369,9 +379,10 @@
     <MESSAGE value="댓글 더보기 창 재구성&#10;1. 본문과 댓글창 화면으로 나눔." />
     <MESSAGE value="업데이트 내역&#10;1. catto 페이지 추가&#10;2. 댓글 생성 봇 catto 추가" />
     <MESSAGE value="업데이트 내역&#10;1. catto 페이지 랜더링 시, catto 가 자신을 스스로 소개하는 기능 추가.&#10;2. catto 동작 순서 : 데이터 로드 및 자기 소개 - 페이지 랜더링&#10;3. catto 성능 개선 : 프롬프트로 자기 소개 예시문을 주고, 창의성을 낮춰 예시에 의존하게 만듬." />
-    <option name="LAST_COMMIT_MESSAGE" value="업데이트 내역&#10;1. catto 페이지 랜더링 시, catto 가 자신을 스스로 소개하는 기능 추가.&#10;2. catto 동작 순서 : 데이터 로드 및 자기 소개 - 페이지 랜더링&#10;3. catto 성능 개선 : 프롬프트로 자기 소개 예시문을 주고, 창의성을 낮춰 예시에 의존하게 만듬." />
+    <MESSAGE value="업데이트 내역&#10;1. catto 가 작성한 댓글의 게시물을 확인할 수 있는 하이퍼링크 추가.&#10;2. 템플릿 수정 시, 자동 리로드 되도록 설정" />
+    <option name="LAST_COMMIT_MESSAGE" value="업데이트 내역&#10;1. catto 가 작성한 댓글의 게시물을 확인할 수 있는 하이퍼링크 추가.&#10;2. 템플릿 수정 시, 자동 리로드 되도록 설정" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Video_website$Video_website.coverage" NAME="Video_website Coverage Results" MODIFIED="1727401139070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Video_website$Video_website.coverage" NAME="Video_website Coverage Results" MODIFIED="1727430449521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
