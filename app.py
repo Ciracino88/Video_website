@@ -14,6 +14,8 @@ from blueprints.catto import catto_bp
 
 load_dotenv()
 app = Flask(__name__)
+app.config['TEMPLATES_AUTO_RELOAD'] = True
+
 app.secret_key = os.getenv('SESSION_SECRET_KEY')
 app.register_blueprint(index_bp)
 app.register_blueprint(post_bp)
@@ -23,7 +25,6 @@ app.register_blueprint(calculator_bp)
 app.register_blueprint(post_detail_bp)
 app.register_blueprint(top_nav_bp)
 app.register_blueprint(login_bp)
-
 app.register_blueprint(catto_bp)
 
 if __name__ == '__main__':
